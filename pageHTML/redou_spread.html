@@ -41,12 +41,18 @@
             font-weight: 700;
         }
         /*地图设置*/
+        .big_box {
+            position: relative;
+        }
         #map {
-            width: 880px;
-            height: 650px;
-            margin-top: 20px;
-            margin-left: 15px;
+            width: 56%;
+            height: 700px;
+            /*margin-top: 20px;*/
+            /*margin-left: 15px;*/
             float: left;
+            position: absolute;
+            top: 20px;
+            left: 15px;
             background-color: #eeeeee;
             border-radius: 10px;
         }
@@ -54,21 +60,24 @@
 
         /*信息栏设置*/
         #information {
-            width: 600px;
-            height: 650px;
-            margin-top: 20px;
-            margin-right: 20px;
-            float: right;
+            width: 40%;
+            height: 700px;
+            /*margin-top: 20px;*/
+            /*margin-left: 10px;*/
+            position: absolute;
+            top: 20px;
+            right:15px;
             background: url("https://jrflower.github.io/redou_data/img/a5e0fe2947644a14848905c615d16019.jpg");
             background-size: 100% 100%;
             border-radius: 10px;
         }
 
         #information #text {
-            width: 580px;
+            width: 595px;
             height: 200px;
             margin: 10px;
             display: block;
+            /*float: right;*/
             background-color: rgba(110, 144, 134, 0.8);
             border-radius: 10px;
         }
@@ -83,13 +92,13 @@
         #information #detail_text {
             float: left;
             margin: 0 10px 0 10px;
-            width: 580px;
-            height: 420px;
+            width: 595px;
+            height: 470px;
             background-color: #00796f;
             border-radius: 10px;
         }
         #detail_text ul {
-            width: 560px;
+            width: 575px;
             height: 50px;
             float: left;
             margin: 10px;
@@ -101,7 +110,7 @@
             float: left;
             width: 100px;
             height: 40px;
-            margin: 5px 0 0 10px;
+            margin: 5px 0 0 12px;
             text-align: center;
             background-color: #ef5353;
             border-radius: 10px;
@@ -127,11 +136,10 @@
         /*详细说明*/
         #detail_text span {
             float: left;
-            width: 560px;
+            width: 575px;
             height: 120px;
             margin: 0 10px 0 10px;
         }
-
         #detail_text #detail p {
             height: 90px;
             font-size: 15px;
