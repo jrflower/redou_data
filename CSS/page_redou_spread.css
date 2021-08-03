@@ -1,0 +1,142 @@
+
+* {
+    /*格式化网页内容*/
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #167a8b;
+}
+
+/*div 1 大布局*/
+.big_box {
+    position: relative;
+}
+
+/*div 1.1 地图*/
+#map {
+    width: 56%;
+    height: 700px;
+    /*margin-top: 20px;*/
+    /*margin-left: 15px;*/
+    float: left;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    background-color: #eeeeee;
+    border-radius: 10px;
+}
+
+/*div 1.2 文字信息*/
+#information {
+    width: 40%;
+    height: 700px;
+    /*margin-top: 20px;*/
+    /*margin-left: 10px;*/
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    background: url("https://jrflower.github.io/redou_data/img/a5e0fe2947644a14848905c615d16019.jpg");
+    background-size: 100% 100%;
+    border-radius: 10px;
+}
+
+/*span 1.2.1 红豆杉简要介绍*/
+#information #text {
+    width: 96%;
+    height: 200px;
+    margin: 10px 2% 10px 2%;
+    display: block;
+    /*float: right;*/
+    background-color: rgba(110, 144, 134, 0.8);
+    border-radius: 10px;
+}
+
+/*span 1.2.1.1 红豆杉将将要介绍文字设置*/
+#information #text #detail_title {
+    position: absolute;
+    font-size: 20px;
+    color: #eeeeee;
+    padding: 0 10px 10px 10px;
+}
+
+/*span */
+#information #detail_text {
+    width: 96%;
+    height: 470px;
+    float: left;
+    margin: 0 2% 0 2%;
+    background-color: #00796f;
+    border-radius: 10px;
+}
+
+/*span1.2.2*/
+
+#detail_text ul {
+    width: 96%;
+    height: 50px;
+    float: left;
+    margin: 10px 2% 0 2%;
+    background-color: #dbedf3;
+    border-radius: 10px;
+}
+
+/*ul 1.2.2.1*/
+
+#detail_text ul li {
+    float: left;
+    width: 18%;
+    height: 40px;
+    margin: 5px 0 0 1.6%;
+    text-align: center;
+    background-color: #ef5353;
+    border-radius: 10px;
+}
+
+/*li 1.2.2.1.1*/
+#detail_text ul li:hover {
+    /*触发效果一*/
+    background-color: #ff9171;
+    border-radius: 10px;
+}
+
+#detail_text ul li p {
+    font-size: 18px;
+    text-align: center;
+    margin: 7px auto;
+    font-weight: 700;
+    color: white;
+}
+
+/*li 1.2.2.1.1.1*/
+#detail_text ul li p:hover {
+    /*触发效果二*/
+    color: #f8f8f8;
+}
+
+
+#detail_text span {
+    float: left;
+    width: 96%;
+    height: 120px;
+    margin: 10px 2% 0 2%;
+}
+
+#detail_text #detail p {
+    height: 90px;
+    font-size: 15px;
+    padding: 10px;
+    color: #404b69;
+    background-color: #e5f4e7;
+    border-radius: 10px;
+}
+
+#detail_text #bar {
+    float: left;
+    height: 270px;
+    margin: 0 2% 0 2%;
+    background-color: rgba(255, 255, 255,0.8);
+    border-radius: 10px;
+}
