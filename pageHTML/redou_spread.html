@@ -3028,7 +3028,7 @@
                 })
             })
         </script>
-        <script>
+        <script type="text/javascript">
             var chart = echarts.init(
                 document.getElementById('bar'),{renderer: 'canvas'});
             var option = {
@@ -3081,13 +3081,13 @@
                         itemStyle: {
                             "normal": {
                                 "color":
-                                    new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-                                    {offset: 0, color: '#fccf4d'},
-                                    {offset: 0.5, color: '#00796f'},
-                                    {offset: 0.8, color: '#009589'},
-                                    {offset: 1, color: '#66e1b4'},
+                                    new echarts.graphic.LinearGradient(0, 0,0, 1, [
+                                    {offset: 0, color: '#1a3c40'},
+                                    {offset: 0.3, color: '#144d53'},
+                                    {offset: 0.5, color: '#307672'},
+                                    {offset: 1, color: '#e4eddb'},
                                     ], false),
-                                "barBorderRadius": [10, 10, 10, 10],
+                                "barBorderRadius": [5, 5, 0, 0],
                                 "shadowColor": "#7f7e90"
                             }
                         },
@@ -3191,7 +3191,7 @@
                     "show": true,
                     "type": "inside",
                     "realtime": true,
-                    "start": 30,
+                    "start": 20,
                     "end": 80,
                     "orient": "horizontal",
                     "zoomLock": false,
