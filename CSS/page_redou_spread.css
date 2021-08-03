@@ -19,7 +19,7 @@ body {
 #map {
     width: 56%;
     height: 700px;
-    margin-top: 50px;
+    margin-top: 40px;
     /*margin-left: 15px;*/
     float: left;
     position: absolute;
@@ -33,7 +33,7 @@ body {
 #information {
     width: 40%;
     height: 700px;
-    margin-top: 50px;
+    margin-top: 40px;
     /*margin-left: 10px;*/
     position: absolute;
     top: 20px;
