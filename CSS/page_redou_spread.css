@@ -13,14 +13,13 @@ body {
 /*div 1 大布局*/
 .big_box {
     position: relative;
-    margin:60px;
 }
 
 /*div 1.1 地图*/
 #map {
     width: 56%;
     height: 700px;
-    /*margin-top: 20px;*/
+    margin-top: 20px;
     /*margin-left: 15px;*/
     float: left;
     position: absolute;
@@ -34,7 +33,7 @@ body {
 #information {
     width: 40%;
     height: 700px;
-    /*margin-top: 20px;*/
+    margin-top: 20px;
     /*margin-left: 10px;*/
     position: absolute;
     top: 20px;
