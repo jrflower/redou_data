@@ -23,7 +23,7 @@ body {
     /*margin-left: 15px;*/
     float: left;
     position: absolute;
-    top: 20px;
+    top: 50px;
     left: 15px;
     background-color: #eeeeee;
     border-radius: 10px;
@@ -36,7 +36,7 @@ body {
     /*margin-top: 20px;*/
     /*margin-left: 10px;*/
     position: absolute;
-    top: 20px;
+    top: 50px;
     right: 15px;
     background: url("https://jrflower.github.io/redou_data/img/a5e0fe2947644a14848905c615d16019.jpg");
     background-size: 100% 100%;
