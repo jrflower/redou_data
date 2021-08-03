@@ -13,6 +13,7 @@ body {
 /*div 1 大布局*/
 .big_box {
     position: relative;
+    top:20px
 }
 
 /*div 1.1 地图*/
@@ -23,7 +24,7 @@ body {
     /*margin-left: 15px;*/
     float: left;
     position: absolute;
-    top: 50px;
+    top: 20px;
     left: 15px;
     background-color: #eeeeee;
     border-radius: 10px;
@@ -36,7 +37,7 @@ body {
     /*margin-top: 20px;*/
     /*margin-left: 10px;*/
     position: absolute;
-    top: 50px;
+    top: 20px;
     right: 15px;
     background: url("https://jrflower.github.io/redou_data/img/a5e0fe2947644a14848905c615d16019.jpg");
     background-size: 100% 100%;
