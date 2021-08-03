@@ -11,155 +11,13 @@
     <script src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
     <script src="https://assets.pyecharts.org/assets/maps/china.js"></script>
     <script src="https://jrflower.github.io/redou_data/lib/jquery.min.js"></script>
-
+    <link rel="stylesheet" href="https://jrflower.github.io/redou_data/CSS/page_redou_spread.css">
     <!--css设置-->
-    <style>
-        * {
-            /*格式化网页内容*/
-            padding: 0;
-            margin: 0;
-            list-style: none;
-        }
-        body {
-            background-color: #167a8b;
-        }
-        /*标题设置*/
-        #title {
-            /*边框*/
-            width: 100%;
-            height: 60px;
-            background: url("https://jrflower.github.io/redou_data/img/61e42d9309654a068f56b8a452d2b88e.jpg");
-            background-size: 100%;
-            /*字体设置*/
-        }
-        #title p {
-            font-size: 28px;
-            padding: 10px 0 0 0;
-            color: aliceblue;
-            text-align: center;
-            text-decoration: none;
-            font-weight: 700;
-        }
-        /*地图设置*/
-        .big_box {
-            position: relative;
-        }
-        #map {
-            width: 56%;
-            height: 700px;
-            /*margin-top: 20px;*/
-            /*margin-left: 15px;*/
-            float: left;
-            position: absolute;
-            top: 20px;
-            left: 15px;
-            background-color: #eeeeee;
-            border-radius: 10px;
-        }
-
-
-        /*信息栏设置*/
-        #information {
-            width: 40%;
-            height: 700px;
-            /*margin-top: 20px;*/
-            /*margin-left: 10px;*/
-            position: absolute;
-            top: 20px;
-            right:15px;
-            background: url("https://jrflower.github.io/redou_data/img/a5e0fe2947644a14848905c615d16019.jpg");
-            background-size: 100% 100%;
-            border-radius: 10px;
-        }
-        /*总体介绍*/
-        #information #text {
-            width: 96%;
-            height: 200px;
-            margin: 10px 2% 10px 2%;
-            display: block;
-            /*float: right;*/
-            background-color: rgba(110, 144, 134, 0.8);
-            border-radius: 10px;
-        }
-        #information #text #detail_title {
-            position: absolute;
-            font-size: 20px;
-            color: #eeeeee;
-            padding: 0 10px 10px 10px;
-        }
-        /*各类按钮*/
-        #information #detail_text {
-            width: 96%;
-            height: 470px;
-            float: left;
-            margin: 0 2% 0 2%;
-            background-color: #00796f;
-            border-radius: 10px;
-        }
-        #detail_text ul {
-            width: 96%;
-            height: 50px;
-            float: left;
-            margin: 10px 2% 0 2%;
-            background-color: #dbedf3;
-            border-radius: 10px;
-        }
-
-        #detail_text ul li {
-            float: left;
-            width: 18%;
-            height: 40px;
-            margin: 5px 0 0 1.6%;
-            text-align: center;
-            background-color: #ef5353;
-            border-radius: 10px;
-        }
-
-        #detail_text ul li:hover {
-            /*触发效果一*/
-            background-color: #ff9171;
-            border-radius: 10px;
-        }
-        #detail_text ul li p {
-            font-size: 18px;
-            text-align: center;
-            margin: 7px auto;
-            font-weight: 700;
-            color: white;
-        }
-        #detail_text ul li p:hover {
-            /*触发效果二*/
-            color: #f8f8f8;
-        }
-
-        /*详细说明*/
-        #detail_text span {
-            float: left;
-            width: 96%;
-            height: 120px;
-            margin: 10px 2% 0 2%;
-        }
-        #detail_text #detail p {
-            height: 90px;
-            font-size: 15px;
-            padding: 10px;
-            color: #404b69;
-            background-color: #e5f4e7;
-            border-radius: 10px;
-        }
-        #detail_text #tips p {
-            font-size: 10px;
-            color: #d3d4d8;
-            padding: 10px;
-        }
-    </style>
 </head>
 <body>
-<!-- <div id="title">
-    <p>中国境内红豆杉分布情况</p>
-</div> -->
 
-<div>
+
+<div class="big_box">
     <div id="map"></div>
     <script type="text/javascript">
         // $.get("json/china.json", function (ret) {
@@ -3055,8 +2913,8 @@
                     "type": 'scroll',
                     "show": true,
                     "orient": 'vertical',
-                    "top": '38%',
-                    "right": '84%',
+                    "top": '45%',
+                    "right": '85%',
                     "padding": 5,
                     "itemGap": 10,
                     "itemWidth": 25,
@@ -3105,8 +2963,7 @@
                             itemGap: 10
                         }
                     ],
-            }
-        ;
+            };
         mchart.setOption(option);
 
 
@@ -3151,16 +3008,11 @@
                 <p>中国红豆杉<br>为红豆杉科红豆杉属乔本植物。红豆杉是第四纪冰川时期孑遗植
                     物，世界珍稀濒危物种。中国红豆杉是中国特有物种，我国将其列为一级重点
                     保护植物，分布于甘肃南部、陕西南部、湖北西部、四川等地。</p>
-
             </span>
-<!--             <span id="tips">
-                <p><b>tips：</b>
-                    <i>地图左端图例可通过点击显示或隐藏数据点;
-                    地图右上角配有下载、数据可视以及还原初始工具</i>
-                </p>
-        </span> -->
-        </span>
 
+            <span id="bar"></span>
+
+        </span>
         <!--切换设置-->
         <script type="text/javascript">
             $(function () {
@@ -3176,7 +3028,178 @@
                 })
             })
         </script>
-
+        <script>
+            var chart = echarts.init(
+                document.getElementById('bar'),{renderer: 'canvas'});
+            var option = {
+                "animation": {
+                    animation: true,
+                    animationThreshold: 2000,
+                    animationDuration: 1000,
+                    animationEasing: "cubicOut",
+                    animationDelay: 0,
+                    animationDurationUpdate: 300,
+                    animationEasingUpdate: "cubicOut",
+                    animationDelayUpdate: 0,
+                },
+                "series": [
+                    {
+                        type: "bar",
+                        name: "红豆杉种类",
+                        legendHoverLink: true,
+                        data: [
+                           53,
+                           194,
+                           8,
+                           182,
+                           5,
+                           129,
+                           14,
+                           138,
+                           532,
+                           677,
+                           579,
+                           22,
+                           1,
+                           1],
+                        showBackground: false,
+                        barMinHeight: 0,
+                        barCategoryGap: "60%",
+                        barGap: "30%",
+                        large: false,
+                        largeThreshold: 400,
+                        seriesLayoutBy: "column",
+                        datasetIndex: 0,
+                        clip: true,
+                        zlevel: 0,
+                        z: 2,
+                        label: {
+                            "show": true,
+                            "position": "top",
+                            "margin": 8
+                        },
+                        itemStyle: {
+                            "normal": {
+                                "color":
+                                    new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                                    {offset: 0, color: '#fccf4d'},
+                                    {offset: 0.5, color: '#00796f'},
+                                    {offset: 0.8, color: '#009589'},
+                                    {offset: 1, color: '#66e1b4'},
+                                    ], false),
+                                "barBorderRadius": [10, 10, 10, 10],
+                                "shadowColor": "#7f7e90"
+                            }
+                        },
+                    }
+                ],
+                "tooltip": {
+                    "show": true,
+                    "trigger": "item",
+                    "triggerOn": "mousemove|click",
+                    "axisPointer": {
+                        "type": "line"
+                    },
+                    "showContent": true,
+                    "alwaysShowContent": false,
+                    "showDelay": 0,
+                    "hideDelay": 100,
+                    "textStyle": {
+                        "fontSize": 14
+                    },
+                    "borderWidth": 0,
+                    "padding": 5
+                },
+                "xAxis": [
+                    {
+                        "show": true,
+                        "scale": false,
+                        "nameLocation": "end",
+                        "nameGap": 15,
+                        "gridIndex": 0,
+                        "axisLabel": {
+                            "show": true,
+                            "position": "top",
+                            "rotate": -30,
+                            "margin": 8
+                        },
+                        "inverse": false,
+                        "offset": 0,
+                        "splitNumber": 5,
+                        "minInterval": 0,
+                        "splitLine": {
+                            "show": false,
+                            "lineStyle": {
+                                "show": true,
+                                "width": 1,
+                                "opacity": 1,
+                                "curveness": 0,
+                                "type": "solid"
+                            }
+                        },
+                        "data": [
+                                "白豆杉",
+                                "香榧树",
+                                "长叶榧树",
+                                "巴山榧树",
+                                "日本榧树",
+                                "短叶穗花杉",
+                                "云南穗花杉",
+                                "台湾穗花杉",
+                                "云南红豆杉",
+                                "南方红豆杉",
+                                "中国红豆杉",
+                                "东北红豆杉",
+                                "欧洲红豆杉",
+                                "加拿大红豆杉"
+                            ],
+                    }
+                ],
+                "yAxis": [
+                    {
+                        "show": true,
+                        "scale": false,
+                        "nameLocation": "end",
+                        "nameGap": 15,
+                        "gridIndex": 0,
+                        "inverse": false,
+                        "offset": 0,
+                        "splitNumber": 5,
+                        "minInterval": 0,
+                        "splitLine": {
+                            "show": false,
+                            "lineStyle": {
+                                "show": true,
+                                "width": 1,
+                                "opacity": 1,
+                                "curveness": 0,
+                                "type": "solid"
+                            }
+                        }
+                    }
+                ],
+                //标题设置
+                "title": [
+                    {
+                        text: "样本数量统计图",
+                        padding: 10,
+                        itemGap: 10
+                    }
+                ],
+                //滑动设置
+                "dataZoom": {
+                    "show": true,
+                    "type": "inside",
+                    "realtime": true,
+                    "start": 30,
+                    "end": 80,
+                    "orient": "horizontal",
+                    "zoomLock": false,
+                    "filterMode": "filter"
+                }
+            };
+            chart.setOption(option);
+</script>
     </div>
 </div>
 
