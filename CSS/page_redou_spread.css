@@ -18,7 +18,7 @@ body {
 /*div 1.1 地图*/
 #map {
     width: 56%;
-    height: 700px;
+    height: 680px;
     margin-top: 40px;
     /*margin-left: 15px;*/
     float: left;
@@ -32,7 +32,7 @@ body {
 /*div 1.2 文字信息*/
 #information {
     width: 40%;
-    height: 700px;
+    height: 680px;
     margin-top: 40px;
     /*margin-left: 10px;*/
     position: absolute;
@@ -135,7 +135,7 @@ body {
 
 #detail_text #bar {
     float: left;
-    height: 270px;
+    height: 260px;
     margin: 0 2% 0 2%;
     background-color: rgba(255, 255, 255,0.8);
     border-radius: 10px;
