@@ -9,7 +9,7 @@ ul,li {list-style: none; padding: 0; margin: 0;}
 img {max-width:100%; vertical-align: middle;}
 
 /*第一个div*/
-.main {width: 1500px; margin: 0 auto; padding:0;}
+.main {width: 1490px; margin: 0 auto; padding:0;}
 
 /*div下的标题*/
 .title {text-align: center; color: #393737; font-size:38px; margin: 0 0 20px 0;font-weight: 700;}
@@ -32,8 +32,8 @@ img {max-width:100%; vertical-align: middle;}
 :root .w-accor4 li h3{ top:40%;}
 
 /*内容框*/
-.w-accor4 .eco .dec_ar{ border-radius: 10px;line-height:1.7; width: 600px; position:absolute; z-index:1; left:10px; transform:translateY(-50%) scale(0); -webkit-transform:translateY(-50%) scale(0); padding:30px; background:rgba(0,0,0,0.7); color:whitesmoke; opacity:0; *filter:alpha(opacity=0); filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);transition:all 0.5s; -webkit-transition:all 0.5s; }
-.w-accor4 .life .dec_ar{ border-radius: 10px;line-height:1.7; width: 600px; position:absolute; z-index:1; right:10px; transform:translateY(-50%) scale(0); -webkit-transform:translateY(-50%) scale(0); padding:30px; background:rgba(0,0,0,0.7); color:whitesmoke; opacity:0; *filter:alpha(opacity=0); filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);transition:all 0.5s; -webkit-transition:all 0.5s; }
+.w-accor4 .eco .dec_ar{ border-radius: 10px;line-height:1.7; width: 600px; position:absolute; z-index:1; left:20px; transform:translateY(-50%) scale(0); -webkit-transform:translateY(-50%) scale(0); padding:30px; background:rgba(0,0,0,0.7); color:whitesmoke; opacity:0; *filter:alpha(opacity=0); filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);transition:all 0.5s; -webkit-transition:all 0.5s; }
+.w-accor4 .life .dec_ar{ border-radius: 10px;line-height:1.7; width: 600px; position:absolute; z-index:1; right:20px; transform:translateY(-50%) scale(0); -webkit-transform:translateY(-50%) scale(0); padding:30px; background:rgba(0,0,0,0.7); color:whitesmoke; opacity:0; *filter:alpha(opacity=0); filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=0);transition:all 0.5s; -webkit-transition:all 0.5s; }
 :root .w-accor4 li .dec_ar{ top:55%;}
 
 .w-accor4 li .i_img{ text-align:center; margin-bottom:1em;width: 500px;height: 100px}
