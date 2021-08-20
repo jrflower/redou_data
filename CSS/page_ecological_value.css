@@ -6,7 +6,7 @@ body { margin: 0;line-height:1.5; font-size:18px;font-family:"微软雅黑",micr
 ul,li {list-style: none; padding: 0; margin: 0;}
 .clearfix:after{ content:""; display:block; clear:both; height:0; visibility:hidden;}
 .clearfix{ zoom:1;}
-img {max-width:100%; vertical-align: middle;}
+img {max-width:1600px; vertical-align: middle;}
 
 /*第一个div*/
 .main {width: 100%;height: 700px; margin: 0 auto; padding:0;}
