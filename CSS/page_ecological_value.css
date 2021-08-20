@@ -9,7 +9,7 @@ ul,li {list-style: none; padding: 0; margin: 0;}
 img {max-width:100%; vertical-align: middle;}
 
 /*第一个div*/
-.main {width: 1600px;height: 700px; margin: 0 auto; padding:0;}
+.main {width: 1520px;height: 700px; margin: 0 auto; padding:0;}
 
 /*div下的标题*/
 .title {text-align: center; color: #393737; font-size:38px; margin: 0 0 20px 0;font-weight: 700;}
