@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>紫杉醇市场趋势</title>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+    <style>
+        body {
+            background-color: #145374
+        }
+
+        .p {
+            width: 820px;
+            position: relative;
+            top: 40px;
+        }
+
+        .text {;
+            width: 220px;
+            height: 710px;
+            position: relative;
+            top: 40px;
+            left: 820px;
+            border-radius: 10px;
+            background-color: white
+        }
+
+        .text p {
+            font-size: 20px;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            font-family: 华文楷体
+        }
+
+        .text h3 {
+            font-size: 24px;
+            margin: 0 0 10px 0;
+            padding: 10px
+        }
+
+        .chart_line {
+            width: 800px;
+            height: 400px;
+            border-radius: 10px;
+            position: absolute;
+            left: 10px;
+        }
+
+        .chart-pie {
+            width: 800px;
+            height: 300px;
+            position: absolute;
+            top: 410px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="p">
+    <div id="echarts" class="chart_line"></div>
+    <script>
+        var mycharts = echarts.init(
+            document.getElementById('echarts'), 'white', {renderer: 'canvas'});
+        var option = {
+            "backgroundColor": "white",
+            "animation": true,
+            "animationThreshold": 2000,
+            "animationDuration": 1000,
+            "animationEasing": "cubicOut",
+            "animationDelay": 0,
+            "animationDurationUpdate": 300,
+            "animationEasingUpdate": "cubicOut",
+            "animationDelayUpdate": 0,
+            "color": [
+                "#5588a3",
+                "#61a0a8",
+
+            ],//颜色库
+            "series": [
+                {
+                    "type": "bar",
+                    "name": "市场规模（十亿元）",
+                    "legendHoverLink": true,
+                    "data": [
+                        4.2,
+                        4.6,
+                        5.3,
+                        5.9,
+                        8.2,
+                        8.8,
+                        9.7,
+                        10.8,
+                        12.1,
+                        13.4
+                    ],
+                    "showBackground": false,
+                    "barMinHeight": 0,
+                    "barCategoryGap": "20%",
+                    "barGap": "30%",
+                    "large": false,
+                    "largeThreshold": 400,
+                    "seriesLayoutBy": "column",
+                    "datasetIndex": 0,
+                    "clip": true,
+                    "zlevel": 1,
+                    "z": 2,
+                    "label": {
+                        "show": true,
+                        "position": "top",
+                        "margin": 8
+                    }
+                },
+            ],
+            "legend": [
+                {
+                    "data": ["市场规模（十亿元）",
+                    ],
+                    "selected": {
+                        "市场规模（十亿元）": true,
+
+                    },
+                    "show": true,
+                    "left": 600,
+                    "top": 20,
+                    "padding": 5,
+                    "itemGap": 10,
+                    "itemWidth": 25,
+                    "itemHeight": 14
+                }
+            ],//图例设置
+
+            "tooltip": {
+                "show": true,
+                "trigger": "axis",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "shadow"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },//提示显示设置
+
+            "xAxis": [
+                {
+                    "name": "年份",
+                    "show": true,
+                    "scale": false,
+                    "nameLocation": "end",
+                    "nameGap": 15,
+                    "gridIndex": 0,
+                    "inverse": false,
+                    "offset": 0,
+                    "splitNumber": 5,
+                    "minInterval": 0,
+                    "splitLine": {
+                        "show": false,
+                        "lineStyle": {
+                            "show": true,
+                            "width": 1,
+                            "opacity": 1,
+                            "curveness": 0,
+                            "type": "solid"
+                        }
+                    },
+                    "data": [
+                        "2015年",
+                        "2016年",
+                        "2017年",
+                        "2018年",
+                        "2019年",
+                        "2020年",
+                        "2021年",
+                        "2022年",
+                        "2023年",
+                        "2024年"
+                    ]
+                }
+            ],//x轴设置
+            "yAxis": [
+                {
+                    "name": "销售额（十亿元）",
+                    "show": true,
+                    "scale": false,
+                    "nameLocation": "middle",
+                    "nameGap": 25,
+                    "gridIndex": 0,
+                    "inverse": false,
+                    "offset": 0,
+                    "splitNumber": 5,
+                    "minInterval": 0,
+                    "splitLine": {
+                        "show": false,
+                        "lineStyle": {
+                            "show": true,
+                            "width": 1,
+                            "opacity": 1,
+                            "curveness": 0,
+                            "type": "solid"
+                        }
+                    }
+                }
+            ],//y轴设置
+            "title": [
+                {
+                    "text": "2015-2024E中国紫杉醇药物市场规模现状及预测",
+                    "subtext": "数据来源于中金企信国际咨询",
+                    padding: 10,
+                    itemGap: 15
+                }
+            ],
+            "toolbox":
+                [
+                    {
+                        show: true,
+                        orient: "horizontal",bottom: 5,right:5,
+                        feature: {
+                            saveAsImage: {title: "下载图片"},
+                            dataView: {title: "数据视图", readOnly: true},
+                        }
+                    }
+                ],
+        };
+        mycharts.setOption(option);
+    </script>
+    <div id="echarts_2" class="chart-pie"></div>
+    <script>
+        var mycharts_2 = echarts.init(
+            document.getElementById('echarts_2'), 'white', {renderer: 'canvas'});
+        var option = {
+            "backgroundColor": "white",
+            "animation": true,
+            "animationThreshold": 2000,
+            "animationDuration": 1000,
+            "animationEasing": "cubicOut",
+            "animationDelay": 0,
+            "animationDurationUpdate": 300,
+            "animationEasingUpdate": "cubicOut",
+            "animationDelayUpdate": 0,
+            "color": [
+                "#00334e",
+                "#145374",
+                "#5588a3",
+            ],
+            "series": [
+                {
+                    "type": "pie",
+                    "name": "市场占比：",
+                    "clockwise": true,
+                    "data": [
+                        {
+                            "name": "紫杉醇注射液",
+                            "value": 22.5
+                        },
+                        {
+                            "name": "注射用紫杉醇",
+                            "value": 45.8
+                        },
+                        {
+                            "name": "注射用紫杉醇脂质体",
+                            "value": 31.7
+                        },
+
+                    ],
+                    "radius": "55%",
+                    "center": [
+                        "50%",
+                        "50%"
+                    ],
+                    "roseType": "radius",
+                    "label": {
+                        "show": true,
+                        "position": "top",
+                        "color": "rgba(0,0,0,1)",
+                        "margin": 8,
+                        "fontSize": 18,
+                        "fontFamily": "华文楷体"
+                    },
+                    "tooltip": {
+                        "show": true,
+                        "trigger": "item",
+                        "triggerOn": "mousemove|click",
+                        "axisPointer": {
+                            "type": "line"
+                        },
+                        "showContent": true,
+                        "alwaysShowContent": false,
+                        "showDelay": 0,
+                        "hideDelay": 100,
+                        "formatter": "{b} <br/>{a}{d}%",
+                        "textStyle": {
+                            "fontSize": 16
+                        },
+                        "borderWidth": 0,
+                        "padding": 5
+                    },
+                    "rippleEffect": {
+                        "show": true,
+                        "brushType": "stroke",
+                        "scale": 2.5,
+                        "period": 4
+                    }
+                }
+            ],
+            "legend": [
+                {
+                    "data": [
+                        "紫杉醇注射液",
+                        "注射用紫杉醇",
+                        "注射用紫杉醇脂质体",
+                    ],
+                    "selected": ["紫杉醇注射液",
+                        "注射用紫杉醇",
+                        "注射用紫杉醇脂质体"],
+                    "show": true,
+                    "bottom": 10,
+                    "padding": 5,
+                    "itemGap": 25,
+                    "itemWidth": 25,
+                    "itemHeight": 14
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "title": [
+                {
+                    "text": "2019年度中国紫杉醇药物市场细分药品市场比重分析",
+                    "subtext": "数据来源中金企信国际咨询",
+                    "textFamily": "华文楷体",
+                    "left": "left",
+                    "padding": 5,
+                    "itemGap": 15,
+                    "textStyle": {
+                        "color": "#1a2634"
+                    }
+                }
+            ],
+            "toolbox":
+                [
+                    {
+                        show: true,
+                        orient: "horizontal",top: 5,right:5,
+                        feature: {
+                            saveAsImage: {title: "下载图片"},
+                            dataView: {title: "数据视图", readOnly: true},
+                        }
+                    }
+                ],
+        };
+        mycharts_2.setOption(option);
+    </script>
+</div>
+<div class="text">
+    <h3>行业规模预测分析</h3>
+    <p>2019年，中国紫杉醇药物市场规模达到<b style="color: #ef5353">82亿元。</b><br><br>
+        2015年至2019年<b style="color: #ef5353">复合年增长率为18.1%</b>。<br><br>
+        中国紫杉醇药物市场增速较快，2024年预计将达到<b style="color: #ef5353">134亿元</b>，<br><br>
+        2019年至2024年<b style="color: #ef5353">复合年增长率为10.2%</b>；<br><br>
+        预计2030年达到<b style="color: #ef5353">201亿元</b>，<br><br>
+        2024年至2030年<b style="color: #ef5353">年均复合增长率为7.0%。</b></p><br><br>
+</div>
+
+</body>
+</html>
