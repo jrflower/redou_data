@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+    <script type="text/javascript" src="https://assets.pyecharts.org/assets/maps/china.js"></script>
+    <style>
+        body {background: url("images/背景灰色.jpg") no-repeat 0 0 ;background-size: 100%}
+        .big {
+            position: relative
+        }
+
+        .chart {
+            background-color: #dbedf3;
+            border-radius: 10px;
+            position: absolute;
+            width: 900px;
+            height: 640px;
+            left: 10px;
+            top: 40px;
+        }
+
+        #bar {
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            position: absolute;
+            width: 590px;
+            height: 640px;
+            top: 40px;
+            left: 920px;
+        }
+    </style>
+</head>
+<body>
+<div class="big">
+    <div id="map" class="chart"></div>
+    <script>
+        var data = [
+            {name: "山西", value: 9},
+            {name: "北京", value: 17},
+            {name: "安徽", value: 26},
+            {name: "河北", value: 0},
+            {name: "上海", value: 17},
+            {name: "湖北", value: 82},
+            {name: "广西", value: 31},
+            {name: "贵州", value: 169},
+            {name: "河南", value: 26},
+            {name: "山东", value: 14},
+            {name: "甘肃", value: 43},
+            {name: "广东", value: 65},
+            {name: "福建", value: 421},
+            {name: "江西", value: 317},
+            {name: "重庆", value: 81},
+            {name: "湖南", value: 159},
+            {name: "辽宁", value: 9},
+            {name: "江苏", value: 11},
+            {name: "陕西", value: 62},
+            {name: "四川", value: 145},
+            {name: "吉林", value: 70},
+            {name: "浙江", value: 68},
+            {name: "云南", value: 242},
+            {name: "西藏", value: 0},
+            {name: "新疆", value: 0},
+            {name: "内蒙古", value: 0},
+            {name: "青海", value: 0},
+            {name: "宁夏", value: 0},
+            {name: "台湾", value: 0},
+            {name: "黑龙江", value: 0},
+            {name: "海南", value: 0},
+            {name: "天津", value: 0},
+            {name: "南海诸岛", value: 0},];
+        var chart = echarts.init(
+            document.getElementById('map'), 'white', {renderer: 'canvas'});
+        var option = {
+            "animation": true,
+            "animationThreshold": 2000,
+            "animationDuration": 1000,
+            "animationEasing": "cubicOut",
+            "animationDelay": 0,
+            "animationDurationUpdate": 300,
+            "animationEasingUpdate": "cubicOut",
+            "animationDelayUpdate": 0,
+            "series": {
+                "name": 'mapSer',
+                "type": 'map',
+                "roam": false,
+                "geoIndex": 0,
+                "label": {
+                    show: false,
+                },
+                "data": data,
+            },
+            "legend": [
+                {
+                    "data": [
+                        "geo"
+                    ],
+                    "selected": {
+                        "geo": true
+                    },
+                    "show": true,
+                    "padding": 5,
+                    "itemGap": 10,
+                    "itemWidth": 25,
+                    "itemHeight": 14
+                }
+            ],
+            "tooltip": {
+                "show": true,
+                "trigger": "item",
+                "triggerOn": "mousemove|click",
+                "axisPointer": {
+                    "type": "line"
+                },
+                "showContent": true,
+                "alwaysShowContent": false,
+                "showDelay": 0,
+                "hideDelay": 100,
+                "formatter": function (params) {
+                    return params.name + ' : ' + params.value;
+                },
+                "textStyle": {
+                    "fontSize": 14
+                },
+                "borderWidth": 0,
+                "padding": 5
+            },
+            "title": [
+                {
+                    "text": "各省有关红豆杉违法事件数",
+                    "subtext": "数据来源中国判决文书网",
+                    "top": 15,
+                    "left": 10,
+                    "padding": 5,
+                    "itemGap": 10
+                }
+            ],
+            "visualMap": {
+                "show": true,
+                "type": "continuous",
+                "min": 0,
+                "max": 500,
+                left: 10,
+                "inRange": {
+                    "color": [
+                        "#f2f2f2",
+                        "#f96d00",
+                        "#940a37"
+                    ]
+                },
+                "calculable": true,
+                "inverse": false,
+                "splitNumber": 10,
+                "orient": "vertical",
+                "showLabel": true,
+                "itemWidth": 20,
+                "itemHeight": 140,
+                "borderWidth": 0
+            },//图例
+            "geo": {
+                roam: false,
+                center: [97.99942171343376, 35.33813935247145],
+                map: 'china',
+                left: 'left',
+                label: {
+                    emphasis: {
+                        show: false,
+                    },
+                },
+                itemStyle: {
+                    emphasis: {
+                        areaColor: '#0fefbd',
+                    },
+                },
+            },
+        };
+        chart.setOption(option);
+    </script>
+
+    <div id="bar"></div>
+    <script>
+        var data = [421, 317, 242, 169, 159, 145, 82, 81, 70, 68]
+        var name_text = ["福建", "江西", "云南", "贵州", "湖南", "四川", "湖北", "重庆", "吉林", "浙江",]
+        var defaultData = [500, 500, 500, 500, 500, 500, 500, 500, 500, 500];
+        var color =
+            [
+                "#FF2442",
+                "#f35b25",
+                "#FFB830",
+                "#0fefbd",
+                "#3DB2FF",
+                "#597fca",
+                "#f47c7c",
+                "#f7f48b",
+                "#a1de93",
+                "#70a1d7",
+            ]
+        var mychart = echarts.init(
+            document.getElementById('bar'), 'white', {renderer: 'canvas'});
+        var option = {
+            "animation": true,
+            "animationThreshold": 2000,
+            "animationDuration": 1000,
+            "animationEasing": "cubicOut",
+            "animationDelay": 0,
+            "animationDurationUpdate": 300,
+            "animationEasingUpdate": "cubicOut",
+            "animationDelayUpdate": 0,
+            "tooltip": {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'none'
+                },
+                formatter: function (params) {
+                    return params[0].name + '<br/>' +
+                        "<span style='display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:rgba(36,207,233,0.9)'></span>" +
+                        params[0].seriesName + ' : ' + params[0].value
+                }
+            },
+            "xAxis": {
+                show: false,
+                type: 'value'
+            },
+            "yAxis": [
+                {
+                    type: 'category',
+                    inverse: true,
+                    axisLabel: {
+                        show: true,
+                        textStyle: {
+                            color: '393737',
+                        },
+                    },
+                    splitLine: {
+                        show: false
+                    },
+                    axisTick: {
+                        show: false
+                    },
+                    axisLine: {
+                        show: false
+                    },
+                    data: name_text
+                },
+                {
+                    type: 'category',
+                    inverse: true,
+                    axisTick: 'none',
+                    axisLine: 'none',
+                    show: true,
+                    axisLabel: {
+                        textStyle: {
+                            color: '#393737',
+                            fontSize: '12'
+                        },
+                        formatter: function (value) {
+                            return value;
+                        },
+                    },//数据显示
+                    data: data
+                }],
+            "series": [
+                {
+                    name: '事件数量',
+                    type: 'bar',
+                    zlevel: 1,
+                    itemStyle: {
+                        normal: {
+                            barBorderRadius: 3,
+                            color: (params) => {
+                                return color[params.dataIndex]
+                            }
+                        },
+                    },
+                    barWidth: 20,
+                    data: data
+                },
+                {
+                    name: '背景',
+                    type: 'bar',
+                    barWidth: 20,
+                    barGap: '-100%',
+                    data: defaultData,
+                    itemStyle: {
+                        normal: {
+                            color: '#e8e8e8',
+                            barBorderRadius: 3,
+                        }
+                    },
+                },
+            ],
+            "title": {
+                text:"各省有关红豆杉违法事件数前十",
+                top:15,
+                left:10
+            }
+
+
+        };
+        mychart.setOption(option)
+    </script>
+</div>
+</body>
+</html>
