@@ -1,7 +1,7 @@
 @charset "utf-8";
 *{margin:0;padding:0;list-style-type:none;}
 a,img{border:0;}
-body{_background-attachment:fixed; 
+body{_background-attachment:fixed; }
 body{color:#535353;font-size:12px;font-family: "arial","微软雅黑";background:#f0f1f1;}
 .clear{clear:both;display:block;height:0;overflow:hidden;}
 
