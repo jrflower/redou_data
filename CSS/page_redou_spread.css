@@ -1,142 +1,58 @@
 
-* {
-    /*格式化网页内容*/
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-body {
-    background-color: #06648c;
-}
+* {padding: 0;margin: 0;list-style: none;}
+body {background-color: #334756}
 
 /*div 1 大布局*/
-.big_box {
-    position: relative;
-}
+.big_box {position: relative;}
 
 /*div 1.1 地图*/
 #map {
-    width: 56%;
-    height: 680px;
-    margin-top: 30px;
-    /*margin-left: 15px;*/
-    float: left;
+    width: 900px;height: 670px;
+    top: 50px;left: 10px;
     position: absolute;
-    top: 20px;
-    left: 15px;
+    border-radius: 10px;
     background-color: #eeeeee;
-    border-radius: 10px;
 }
 
-/*div 1.2 文字信息*/
-#information {
-    width: 40%;
-    height: 680px;
-    margin-top: 30px;
-    /*margin-left: 10px;*/
+.information {
+    width: 600px;height: 670px;
+    position: relative;
+    top: 50px;left: 920px;
+    border-radius: 10px;background-color: #5588a3}
+.information .bc{
+    width: 580px;height: 650px;
     position: absolute;
-    top: 20px;
-    right: 15px;
-    background: url("https://jrflower.github.io/redou_data/img/a5e0fe2947644a14848905c615d16019.jpg");
-    background-size: 100% 100%;
+    top: 10px;left: 10px;
     border-radius: 10px;
-}
+    background-color: rgba(255,255,255,0.7)}
 
-/*span 1.2.1 红豆杉简要介绍*/
-#information #text {
-    width: 96%;
-    height: 200px;
-    margin: 10px 2% 10px 2%;
-    display: block;
-    /*float: right;*/
-    background-color: rgba(110, 144, 134, 0.8);
-    border-radius: 10px;
-}
-
-/*span 1.2.1.1 红豆杉将将要介绍文字设置*/
-#information #text #detail_title {
+.information .text {
+    width: 560px;height: 280px;
     position: absolute;
-    font-size: 20px;
-    color: #eeeeee;
-    padding: 0 10px 10px 10px;
-}
-
-/*span */
-#information #detail_text {
-    width: 96%;
-    height: 450px;
-    float: left;
-    margin: 0 2% 0 2%;
-    background-color: #00796f;
+    top: 10px;left: 10px;
     border-radius: 10px;
+    background-color: #e8e8e8;
 }
 
-/*span1.2.2*/
+.information .text p{padding: 10px;margin: 5px;font-family: 华文楷体;font-size: 22px;}
+.information .text p .title{padding: 10px;margin: 10px;font-family: 宋体;font-size: 30px;font-weight: bold}
+.information .text p b {color: #fa4848}
 
-#detail_text ul {
-    width: 96%;
-    height: 50px;
-    float: left;
-    margin: 10px 2% 0 2%;
-    background-color: #dbedf3;
+
+
+
+ul {width: 1000px;}
+.wrap{
+    position: absolute;
+    left: 10px;top:330px;
+    width: 560px;height: 310px;
     border-radius: 10px;
-}
+    margin: 0 auto ;}
+.wrap li{float: left;width:112px;height: 310px}
 
-/*ul 1.2.2.1*/
-
-#detail_text ul li {
-    float: left;
-    width: 18%;
-    height: 40px;
-    margin: 5px 0 0 1.6%;
-    text-align: center;
-    background-color: #ef5353;
-    border-radius: 10px;
-}
-
-/*li 1.2.2.1.1*/
-#detail_text ul li:hover {
-    /*触发效果一*/
-    background-color: #ff9171;
-    border-radius: 10px;
-}
-
-#detail_text ul li p {
-    font-size: 18px;
-    text-align: center;
-    margin: 7px auto;
-    font-weight: 700;
-    color: white;
-}
-
-/*li 1.2.2.1.1.1*/
-#detail_text ul li p:hover {
-    /*触发效果二*/
-    color: #f8f8f8;
-}
+.wrap .start{border-radius: 10px 0 0 10px}
+.wrap .end{border-radius:0 10px  10px 0}
+.wrap li:hover {border-radius: 10px}
 
 
-#detail_text span {
-    float: left;
-    width: 96%;
-    height: 120px;
-    margin: 10px 2% 0 2%;
-}
 
-#detail_text #detail p {
-    height: 90px;
-    font-size: 15px;
-    padding: 10px;
-    color: #404b69;
-    background-color: #e5f4e7;
-    border-radius: 10px;
-}
-
-#detail_text #bar {
-    float: left;
-    height: 260px;
-    margin: 0 2% 0 2%;
-    background-color: rgba(255, 255, 255,0.8);
-    border-radius: 10px;
-}
